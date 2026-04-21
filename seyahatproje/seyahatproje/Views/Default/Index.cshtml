@@ -1,0 +1,69 @@
+﻿@using seyahatproje.Models.siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+
+<body>
+    
+    
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                
+                <div class="indent">
+
+                    <div class="banner">
+
+                        <h1>Seyahat Rehberim</h1>
+                        <div>
+                            <ul> <li><img src="~/images/anasayfa.jpg" alt="" style="height:500px; width:1500px; margin-top:50px; text-align:center;"></li></ul>
+
+                        </div>
+                        <div class="grid1-desc">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+                    
+                    @*<div>          
+                        <ul> <li><img src="~/images/bursa.jpg" alt="" style="height:300px; width:450px; margin-top:50px; text-align:center;"></li></ul>
+
+                      </div>  *@    
+                
+                                  
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyahat Bloğumuza Hoş Geldiniz!</h3>
+                    <div><p>Bu Projeye mart 2023 yılında başladık haziran 2023 ayında bitireceğiz. Kodlarını tamamen biz yaptık mvc5 üzerine kurulu dinamik bir web projesi geliştirdik. </p></div>
+                </div>
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Default")
+                        @Html.Action("Partial4","Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

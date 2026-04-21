@@ -1,0 +1,147 @@
+﻿@using seyahatproje.Models.siniflar
+@model List<otel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="~/stylee3.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.scrollUp.js"></script>
+    <script type="text/javascript" src="dist/demo.js"></script>
+
+</head>
+
+<body>
+
+    <section class="tm-main">
+        <p>Bizim Otel</p>
+    </section>
+    <section class="tm-roomsection">
+        
+        @Html.Action("otel1")
+
+    </section>
+    @*<div class="tm-room1">
+
+                @foreach (var x in Model)
+                {
+                    <div class="tm-trans">
+                        <p>@x.id</p>
+                        <div><p>@x.yataksayisi</p><p>@x.aciklama</p> </div>
+
+                        <div><p>Fiyatı</p><p class="bold">@x.ucret</p> </div>
+                    </div>
+
+
+                    <img class="tm-roomimage" src="@x.resim">
+                    <p class="s">@x.odaadi</p>
+                }
+            </div>
+
+            <div class="tm-room1">
+                @foreach (var x in Model)
+                {
+                    <p>@x.id</p>
+                    <div class="tm-trans">
+                        <div><p>@x.yataksayisi</p><p>@x.aciklama</p> </div>
+
+                        <div><p>Fiyatı</p><p class="bold">@x.ucret</p> </div>
+                    </div>
+
+
+                    <img class="tm-roomimage" src="@x.resim">
+                    <p>@x.odaadi</p>
+                }
+            </div>
+            <div class="tm-room1">
+
+                <div class="tm-trans">
+                    <div><p>2 Bed</p><p>Scenic View</p><p>Free Wifi</p> </div>
+
+                    <div><p>Only for</p><p class="bold">$ 1299.99</p> </div>
+                </div>
+
+
+                <img class="tm-roomimage" src="~/images2/premier.png">
+                <p>Premier Suite</p>
+
+            </div>
+        </section>
+                    <br />
+                    <section class="tm-roomsection">
+                        <div class="tm-room1">
+
+                            <div class="tm-trans">
+                                <div><p>2 Bed</p><p>Free wifi</p><p>Fresh towels</p> </div>
+
+                                <div><p>Only for</p><p class="bold">$ 999.99</p> </div>
+                            </div>
+
+
+                            <img class="tm-roomimage" src="~/images2/luxuryroom.png">
+                            <p class="s">Luxury Room</p>
+
+                        </div>
+                        <div class="tm-room1">
+
+                            <div class="tm-trans">
+                                <div><p>2 Bed</p><p>Fresh towels</p><p>Less costly</p> </div>
+
+                                <div><p>Only for</p><p class="bold">$ 599.99</p> </div>
+                            </div>
+
+
+                            <img class="tm-roomimage" src="~/images2/deluxroom.png">
+                            <p>Delux Room</p>
+
+                        </div>
+                        <div class="tm-room1">
+
+                            <div class="tm-trans">
+                                <div><p>1 Bed</p><p>Fresh towels</p><p>Less costly</p> </div>
+
+                                <div><p>Only for</p><p class="bold">$ 399.99</p> </div>
+                            </div>
+
+
+                            <img class="tm-roomimage" src="~/images2/premiumroom.png">
+                            <p>Premier Room</p>
+
+                        </div>
+                    </section>
+                    <br />
+    *@
+    <section class="tm-makeres">
+        <div class="tm-res">
+            <div class="tm-resbutton">
+
+            </div>
+        </div>
+    </section>
+   
+    <section class="tm-makeres">
+        <div class="tm-res">
+            <div class="tm-resbutton">
+                <br/>
+                <br />
+                <br/>
+                <br/>
+                <br/>
+
+                <a href="/otel/rezervasyonyapp/" style=""> <p>Rezervasyon Yap</p></a>
+            </div>
+        </div>
+    </section>
+    }
+
+</body>
+
+        </html>
+
+

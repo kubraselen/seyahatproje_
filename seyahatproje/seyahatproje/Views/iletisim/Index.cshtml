@@ -1,0 +1,76 @@
+﻿@using seyahatproje.Models.siniflar
+@model List<iletisim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+
+    <div class="header-bottom">
+
+    </div>
+    <div class="contact">
+        <div class="wrap">
+            <div class="contact-top">
+                <h2>İletişim Bilgileri</h2>
+
+            </div>
+            @Html.Action("gonder", "iletisim")
+            <div class="clear"></div>
+            <div class="contact-bottom">
+                <div class="contact-left">
+                    <div class="contact-add">
+                        <h3></h3>
+                        @foreach (var x in Model)
+                        {
+                            <ul class="comment-list">
+
+                                <li>
+                                    <img src="" class="img-responsive" alt="">
+                                    <div class="desc">
+                                        <p>@x.ID  @x.AdSoyad @x.Mail @x.Mesaj</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                            </ul>
+                        }
+
+
+
+                    </div>
+
+                </div>
+                <div class="contact-map">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97485.85005996618!2d29.0322895!3d40.221678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca1582d8d45695%3A0x61a00555fc973392!2sBursa!5e0!3m2!1str!2str!4v1680125461873!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <br><small>
+                        <a href="https://goo.gl/maps/ZVhH33UiZpzeAjJ48" style="color: #555;text-align:left">
+                            Haritayı Daha Büyük Görüntüle
+                        </a>
+                    </small>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

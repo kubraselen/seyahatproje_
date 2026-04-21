@@ -1,0 +1,44 @@
+﻿@model seyahatproje.Models.siniflar.rezervasyonum
+@{
+    ViewBag.Title = "rezervasyongetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+
+
+<h2>Rezervasyon Güncelle</h2>
+<br />
+
+@using (Html.BeginForm("rezervasyonguncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Ad)
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Soyad)
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.mail)
+    @Html.TextBoxFor(x => x.mail, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.odaturu)
+    @Html.TextBoxFor(x => x.odaturu, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.odasayisi)
+    @Html.TextBoxFor(x => x.odasayisi, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Telefon)
+    @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.giristarihi)
+    @Html.TextBoxFor(x => x.giristarihi, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.cikistarihi)
+    @Html.TextBoxFor(x => x.cikistarihi, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <button class="btn btn-success">Rezervasyon Güncelle</button>
+
+}

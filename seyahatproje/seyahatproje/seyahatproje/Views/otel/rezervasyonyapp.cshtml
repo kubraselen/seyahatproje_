@@ -1,0 +1,57 @@
+﻿@model seyahatproje.Models.siniflar.rezervasyonum
+@{
+    ViewBag.Title = "rezervasyonyapp";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<h2>Yeni Rezervasyon Yap</h2>
+<br /><form class="form-group" method="post">
+    @Html.LabelFor(x => x.Ad)
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Soyad)
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.mail)
+    @Html.TextBoxFor(x => x.mail, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Telefon)
+    @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
+    <br />
+
+
+    Oda Türü <select name="odaturu" id="odaturu">
+        <option value="lukssuit">Lüks Suit</option>
+        <option value="deluxe">Deluxe Süit</option>
+        <option value="premier">Premier Süit</option>
+        <option value="luksoda">Lüks Oda</option>
+        <option value="luksbiroda">Lüks Bir Oda</option>
+        <option value="premier">Premier Oda</option>
+    </select>
+    <br />
+    <br />
+    Oda Sayısı <select name="odasayisi" id="odasayisi">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+    <br />
+
+    <br />
+
+    <div class="tm-cl"> Giriş Tarihi:<input type="date" name="giristarihi"></div>
+    <br />
+    <div class="tm-cl"> Çıkış Tarihi:<input type="date" name="cikistarihi"></div>
+   
+    Seçili Tarihler Arası Uygun Olmayan Tarihler
+    <textarea placeholder="date" name="giristarihi">15.05.2023-18.05.2023</textarea>
+    <br/>
+    <br/>
+    <button class="btn btn-primary">Rezervasyon Ekle</button>
+
+
+</form>

@@ -1,0 +1,28 @@
+﻿@using seyahatproje.Models.siniflar;
+@model List<otel>
+<section class="tm-roomsection">
+    @foreach (var x in Model)
+    {
+
+        <div class="tm-room1">
+
+
+            <div class="tm-trans">
+                
+
+                <p>@x.id</p>
+                <div><p>@x.yataksayisi</p><p>@x.aciklama</p> </div>
+
+                <div><p>Fiyatı</p><p class="bold">@x.ucret</p> </div>
+            </div>
+
+
+            <img class="tm-roomimage" src="@x.resim" style="height:200px;width:3000px; padding:15px;">
+            <p>@x.odaadi</p>
+
+
+        </div>
+
+    }
+</section>
+@Html.Action("otel2")

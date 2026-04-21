@@ -1,0 +1,41 @@
+﻿@using seyahatproje.Models.siniflar
+@model List<rezervasyonum>
+@{
+    ViewBag.Title = "rezervasyonum";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Rezervasyon Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Email</th>
+        <th>Oda Türü</th>
+        <th>Oda Sayısı</th>
+        <th>Telefon</th>
+        <th>Giriş Tarihi</th>
+        <th>Çıkış Tarihi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+    <tr>
+        <td>@x.id</td>
+        <td>@x.Ad</td>
+        <td>@x.Soyad</td>
+        <td>@x.mail</td>
+        <td>@x.odaturu</td>
+        <td>@x.odasayisi</td>
+        <td>@x.Telefon</td>
+        <td>@x.giristarihi</td>
+        <td>@x.cikistarihi</td>
+        <td><a href="/Admin/rezervasyonsil/@x.id/" class="btn btn-danger">Sil</a></td>
+        <td><a href="/Admin/rezervasyongetir/@x.id/" class="btn btn-warning">Güncelle</a></td>
+    </tr>
+    }
+    </table>
+<a href="/Admin/yenirezervasyonum/" class="btn btn-primary">Yeni Rezervasyon</a>

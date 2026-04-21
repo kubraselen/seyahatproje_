@@ -1,0 +1,122 @@
+﻿@using seyahatproje.Models.siniflar
+@model List<rezervasyonum>
+@{
+    ViewBag.Title = "rezervasyon";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+
+@*<table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Email</th>
+            <th>Oda Türü</th>
+            <th>Oda Sayısı</th>
+            <th>Telefon</th>
+            <th>Giriş Tarihi</th>
+            <th>Çıkış Tarihi</th>
+            <th>Sil</th>
+
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.id</td>
+                <td>@x.Ad</td>
+                <td>@x.Soyad</td>
+                <td>@x.mail</td>
+                <td>@x.odaturu</td>
+                <td>@x.odasayisi</td>
+                <td>@x.Telefon</td>
+                <td>@x.giristarihi</td>
+                <td>@x.cikistarihi</td>
+                <td><a href="/otel/rezervasyonsil/@x.id/" class="btn btn-danger">Rezervasyon İptal</a></td>
+
+            </tr>
+        }
+    </table>*@
+<br />
+<br />
+<br />
+<a href="/otel/rezervasyonyapp/" class="btn btn-primary">Yeni Rezervasyon</a>
+
+@*<html>
+    <head>
+        <meta charset="utf-8">
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="dist/pickmeup.min.js"></script>
+        <script type="text/javascript" src="dist/handleCounter.js"></script>
+        <link rel="stylesheet" type="text/css" href="~/style3_1.css">
+        <link rel="stylesheet" type="text/css" href="~/style3_2.css">
+        <link rel="stylesheet" type="text/css" href="~/stylee3.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script type="text/javascript" src="~/dist/jquery.scrollUp.js"></script>
+        <script type="text/javascript" src="~/dist/demo.js"></script>
+
+
+    </head>
+
+    <body>
+
+
+        <section class="tm-main">
+            <p>Rezervasyon</p>
+        </section>
+
+        <section class="tm-booking">
+
+
+
+                <form>
+                    @Html.Action("rezervasyonyap", "otel")
+
+                    <div class="tm-form1">
+                        <input type="text" name="ad" placeholder="Ad">
+                        <input type="text" name="soyad" placeholder="Soyad">
+                        <input type="email" name="email" placeholder="mail">
+                        <input type="text" name="Oda Sayısı" placeholder="odasayisi">
+                        <br />
+                        <input type="text" name="Çocuk Sayısı" placeholder="cocuksayisi">
+                        <br />
+                        <label for="rooms" id="inlinelable">Oda Türü</label>
+
+                        <select name="Rooms" id="rooms">
+                            <option value="luxurys">Lüks Suit</option>
+                            <option value="deluxs">Deluxe Süit</option>
+                            <option value="premiers">Premier Süit</option>
+                            <option value="Luxuryr">Lüks Oda</option>
+                            <option value="deluxs">Lüks Bir Oda</option>
+                            <option value="premierr">Premier Oda</option>
+                        </select>
+
+
+
+                    </div>
+
+                    <div class="vertical-line"> </div>
+
+                    <div class="tm-form2">
+
+                        <div class="tm-cl"> Giriş Tarihi:<input type="date" name="bday"></div>
+
+                        <div class="tm-cl"> Çıkış Tarihi:<input type="date" name="bday"></div>
+
+                        <div class="tm-cl">
+                            <input type="submit" id="sub" value="Rezervasyon Yap">
+                        </div>
+                    </div>
+
+                </form>
+
+        </section>
+
+    </body>
+
+    </html>*@
+
+
